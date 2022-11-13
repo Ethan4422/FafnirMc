@@ -1,9 +1,0 @@
-name: Commands
-version: '${project.version}'
-main: me.ethan.commans.Commans
-api-version: 1.19
-authors: [ Ethan ]
-description: Commands
-commands:
-  f:
-    description: "Core"
