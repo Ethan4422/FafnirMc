@@ -10,30 +10,6 @@ import java.util.regex.Pattern;
 
 public class functions {
 
-    public static int Level(Player user) {
-        int lvl = user.getLevel();
-        return lvl;
-    }
-
-    public static float Speed(Player user) {
-        float spd = 0.2f;
-        return spd;
-    }
-
-    public static double PHealth(Player user) {
-        int lvl = user.getLevel();
-        double newHealth = Math.floor(20 + lvl/10);
-
-        return newHealth;
-    }
-
-    public static double EHealth(Entity user) {
-        int lvl = number(user.getName());
-        double newHealth = Math.floor(20 + lvl/10);
-
-        return newHealth;
-    }
-
 
 
     public static Pattern pattern = Pattern.compile("§[0-9]{1}");

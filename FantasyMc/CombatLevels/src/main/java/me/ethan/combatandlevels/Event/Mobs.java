@@ -14,13 +14,9 @@ import org.bukkit.event.entity.EntityDeathEvent;
 public class Mobs implements Listener {
 
     CombatAndLevels plugin;
-    public Mobs(CombatAndLevels plugin){this.plugin = plugin;}
 
-    @EventHandler
-    public void death(EntityDeathEvent e) {
-        if(e.getEntity().getType() != EntityType.PLAYER) {
-            e.setDroppedExp(functions.number(e.getEntity().getName()));
-        }
+    public Mobs(CombatAndLevels plugin) {
+        this.plugin = plugin;
     }
 
     @EventHandler
@@ -32,12 +28,6 @@ public class Mobs implements Listener {
                 e.setDamage(Math.floor(e.getDamage()) + dmg);
                 e.getEntity().sendMessage(String.valueOf(e.getFinalDamage()));
             }
-        }
-        if (e.getDamager().getType() == EntityType.PLAYER) {
-            Player player = (Player) e.getDamager();
-            int dmg = functions.number(String.valueOf(player.getLevel())) / 8;
-            e.setDamage(Math.floor(e.getDamage() + dmg));
-            player.sendMessage(String.valueOf(e.getFinalDamage()));
         }
     }
 
