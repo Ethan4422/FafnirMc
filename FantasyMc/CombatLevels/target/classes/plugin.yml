@@ -1,9 +1,0 @@
-name: CombatAndLevels
-version: '1.0-SNAPSHOT'
-main: me.ethan.combatandlevels.CombatAndLevels
-api-version: 1.19
-authors: [ Ethan ]
-description: Combat and levels
-commands:
-  C:
-    description: "Core"
